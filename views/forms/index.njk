@@ -1,0 +1,192 @@
+{% extends 'layout.njk' %}
+
+{% block body %}
+<div class="c-container">
+    <h1 class="c-h1">{{ title }}</h1>
+    <div class="c-block">
+        <h2>Basic form</h2>
+        <form class="c-form">
+            <p>
+                <label class="c-label" for="form0_first_name">First name</label>
+                <input type="text" id="form0_first_name" name="first_name"/>
+            </p>
+            <p>
+                <label class="c-label" for="form0_last_name">Last name</label>
+                <input type="text" id="form0_last_name" name="last_name"/>
+            </p>
+            <input type="submit" />
+        </form>
+    </div>
+    <div class="c-block">
+        <h2>Basic form with required field</h2>
+        <form class="c-form">
+            <p>
+                <label class="c-label" for="form1_first_name">First name</label>
+                <input type="text" id="form1_first_name" name="first_name" required="required"/>
+            </p>
+            <p>
+                <label class="c-label" for="form1_last_name">Last name</label>
+                <input type="text" id="form1_last_name" name="last_name"/>
+            </p>
+            <input type="submit" value="Send the form" />
+        </form>
+    </div>
+    <div class="c-block">
+        <h2>Basic form submit button</h2>
+        <form class="c-form">
+            <p>
+                <label class="c-label" for="form2_first_name">First name</label>
+                <input type="text" id="form2_first_name" name="first_name" required="required"/>
+            </p>
+            <p>
+                <label class="c-label" for="form2_last_name">Last name</label>
+                <input type="text" id="form2_last_name" name="last_name"/>
+            </p>
+            <button class="c-btn">Send the form</button>
+        </form>
+    </div>
+    <div class="c-block">
+        <h2>Different inputs for different needs</h2>
+        <form class="c-form">
+            <p>
+                <label class="c-label" for="form3_text">Simple text</label>
+                <input type="text" id="form3_text" name="text"/>
+            </p>
+            <p>
+                <label class="c-label" for="form3_password">Password</label>
+                <input type="password" id="form3_password" name="password"/>
+            </p>
+            <p>
+                <label class="c-label" for="form3_number_0">Number</label>
+                <input type="number" id="form3_number_0" name="number"/>
+            </p>
+            <p>
+                <label class="c-label" for="form3_number">Number with min max and step</label>
+                <input type="number" step="10" min="-20" max="20" id="form3_number" name="number"/>
+            </p>
+            <p>
+                <label class="c-label" for="form3_range">Range</label>
+                <input type="range" id="form3_range" name="range" step="1" min="-20" max="20"/>
+            </p>
+            <p>
+                <label class="c-label" for="form3_date">Date</label>
+                <input type="date" id="form3_date" name="date"/>
+            </p>
+            <div>
+                <h4>Please use this radio</h4>
+                <p>
+                    <input type="radio" id="form3_radio_1" name="radio" value="1ere"/>
+                    <label class="c-label c-label--inline" for="form3_radio_1">La premiere</label>
+                </p>
+                <p>
+                    <input type="radio" id="form3_radio_2" name="radio" value="musiq3"/>
+                    <label class="c-label c-label--inline" for="form3_radio_2">Musiq'3</label>
+                </p>
+                <p>
+                    <input type="radio" id="form3_radio_3" name="radio" value="nrj"/>
+                    <label class="c-label c-label--inline" for="form3_radio_3">Nrj</label>
+                </p>
+                <p>
+                    <input type="radio" id="form3_radio_4" name="radio" value="classiq21"/>
+                    <label class="c-label c-label--inline" for="form3_radio_4">Classiq 21</label>
+                </p>
+
+            </div>
+            <p>
+                <label class="c-label" for="form3_file">File</label>
+                <input type="file" id="form3_file" name="file"/>
+            </p>
+            <p>
+                <label class="c-label" for="form3_search">Search</label>
+                <input type="search" id="form3_search" name="search"/>
+            </p>
+
+            <p>
+                <button class="c-btn">Send the form</button>
+                <input type="reset" value="Reset">
+            </p>
+        </form>
+    </div>
+
+    <div class="c-block">
+        <h2>Select</h2>
+        <form class="c-form">
+            <p>
+                <label class="c-label" for="form4_select">Select without option</label>
+                <select name="country_1" id="form4_select">
+                    <option>Belgique</option>
+                    <option>France</option>
+                    <option>Luxembourg</option>
+                </select>
+            </p>
+            <p>
+                <label class="c-label" for="form5_select">Select without default value</label>
+                <select name="country_2" id="form5_select">
+                    <option>---</option>
+                    <option>Belgique</option>
+                    <option>France</option>
+                    <option>Luxembourg</option>
+                </select>
+            </p>
+            <p>
+                <label class="c-label" for="form6_select">Select with values</label>
+                <select name="country_3" id="form5_select" required>
+                    <option value="">---Please choose---</option>
+                    <option value="be">Belgique</option>
+                    <option value="fr">France</option>
+                    <option value="lu">Luxembourg</option>
+                </select>
+            </p>
+            <p>
+                <label class="c-label" for="form7_select">Select with selected value</label>
+                <select name="country_4" id="form7_select" required>
+                    <option value="">---Please choose---</option>
+                    <option value="be">Belgique</option>
+                    <option value="fr" selected>France</option>
+                    <option value="lu">Luxembourg</option>
+                </select>
+            </p>
+            <p>
+                <label class="c-label" for="form8_select">Select with multiple values</label>
+                <select name="country_5" id="form8_select" multiple required>
+                    <optgroup label="Animaux à 4-jambes">
+                        <option value="Chien">Chien</option>
+                        <option value="chat">Chat</option>
+                        <option value="hamster" disabled>Hamster</option>
+                    </optgroup>
+                    <optgroup label="Animaux volants">
+                        <option value="perroquet">Perroquet</option>
+                        <option value="macaw">Macaw</option>
+                        <option value="albatros">Albatros</option>
+                    </optgroup>
+                </select>
+            </p>
+            <p>
+                <button class="c-btn">Send the form</button>
+                <input type="reset" value="Reset">
+            </p>
+        </form>
+    </div>
+    <div class="c-block">
+        <h2>Checkbox</h2>
+        <form class="c-form">
+            <p>Choose your monster's features:</p>
+
+            <div>
+                <input type="checkbox" id="scales" name="scales"
+                       checked>
+                <label for="scales">Scales</label>
+            </div>
+
+            <div>
+                <input type="checkbox" id="horns" name="horns">
+                <label for="horns">Horns</label>
+            </div>
+            <p>
+                <button class="c-btn">Send the form</button>
+                <input type="reset" value="Reset">
+            </p>
+        </form>
+    </div>
+</div>
+{% endblock %}

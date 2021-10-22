@@ -1,0 +1,62 @@
+:root{
+  --spacing-xs : calc(6/16 * 1rem);
+  --spacing-s : calc(10/16 * 1rem);
+  --spacing-m : calc(16/16 * 1rem);
+  --spacing-l : calc(24/16 * 1rem);
+  --spacing-xl : calc(30/16 * 1rem);
+  --spacing-2xl : calc(36/16 * 1rem);
+  --spacing-3xl : calc(42/16 * 1rem);
+  --spacing-4xl : calc(60/16 * 1rem);
+}
+
+html,
+body{
+  background: #3e3e3e;
+  padding: 0;
+  margin:0;
+  font-family: "Helvetica Neue", Helvetica, Verdana, sans-serif;
+  font-size: 18px;
+}
+
+
+
+h1,h2,h3,h4{
+  margin: 0;
+  font-weight: 400;
+}
+
+.c-h1{
+  color: white;
+  margin: var(--spacing-3xl) 0;
+}
+//Components
+
+.c-label{
+  display: block;
+  &--inline{
+    display: inline;
+  }
+}
+
+.c-container {
+  max-width: 48rem;
+  margin: auto;
+}
+
+.c-block {
+  padding: var(--spacing-l);
+  background: white;
+  margin: var(--spacing-xl) 0;
+}
+
+.c-btn{
+  border-radius: var(--spacing-xs);
+  background: orangered;
+  color: white;
+  border: none;
+  padding: var(--spacing-s) var(--spacing-m);
+  &:hover {
+    opacity: .8;
+  }
+}
+
